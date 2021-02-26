@@ -4,11 +4,11 @@ const app =  express();
 
 const jsonResposta = require('./pontosTuristicos.json');
 
-let server_port = process.env.PORT || process.env.PORT || 80;
+const PORT = process.env.PORT || 3000;
 
 /*Iniciando servidor*/
-app.listen(server_port, "localhost", () => {
-    console.log("servidor iniciado");
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`App rodando na porta:${ PORT }`);
 });
 
 /*Configurando respostas do servidor como json e configurando toker para todas rotas, exceto login e url inicial*/
