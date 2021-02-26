@@ -4,8 +4,10 @@ const app =  express();
 
 const jsonResposta = require('./pontosTuristicos.json');
 
+let server_port = process.env.PORT || process.env.PORT || 80;
+
 /*Iniciando servidor*/
-app.listen(3000, () => {
+app.listen(server_port, "localhost", () => {
     console.log("servidor iniciado");
 });
 
